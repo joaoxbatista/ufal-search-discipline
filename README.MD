@@ -2,15 +2,15 @@
 - [X] Começa depois do professor e antes das vagas oferecidas.
 - [X] Salvar os indices relativos ao content de forma que seja possível definir o início e o fim 
 dos horários para cada curso
-- [ ] Juntar os valores dos indices em um array
+- [X] Juntar os valores dos indices em um array
 ````javascript
 [
     { start: 6, end: 9},
     { start: 17, end: 20},
 ]
 ````
-- [ ] Dividir o content com base nos limites obtidos
-- [ ] Obter os horários de cada range, ou seja, da disciplina (**filterTimeTable**)
+- [X] Dividir o content com base nos limites obtidos
+- [X] Obter os horários de cada range, ou seja, da disciplina (**filterTimeTable**)
 
 
 ````javascript
