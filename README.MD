@@ -1,18 +1,24 @@
-## Onde começa e onde terminam os horários?
-- [X] Começa depois do professor e antes das vagas oferecidas.
-- [X] Salvar os indices relativos ao content de forma que seja possível definir o início e o fim 
-dos horários para cada curso
-- [X] Juntar os valores dos indices em um array
-````javascript
-[
-    { start: 6, end: 9},
-    { start: 17, end: 20},
-]
-````
-- [X] Dividir o content com base nos limites obtidos
-- [X] Obter os horários de cada range, ou seja, da disciplina (**filterTimeTable**)
+## Como utilizar
+- Clone o repositório
+- Instale as dependências executando: `npm install`
+- Execute o arquivo: `node index.js`
 
+## Código
+```javascript
+const main = () => {
+    pdfExtract.extract(filePath, options, (err, data) => {
+        if (err) return console.log(err);
+        if (data) {
+            const {pages} = data;
+            const content = mergeContentOfPages(pages);
+            const result = generateDisciplines(content);
+            console.log(JSON.stringify(result));
+        }
+    });
+}
+```
 
+## Retorno 
 ````javascript
 [
   {
