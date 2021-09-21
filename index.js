@@ -3,15 +3,17 @@ const pdfExtract = new PDFExtract();
 const filePath = './files/cc.pdf';
 const options = {};
 
-pdfExtract.extract(filePath, options, (err, data) => {
-    if (err) return console.log(err);
-    if (data) {
-        const {pages} = data;
-        const content = mergeContentOfPages(pages);
-        const result = generateDisciplines(content);
-        console.log(result);
-    }
-});
+const main = () => {
+    pdfExtract.extract(filePath, options, (err, data) => {
+        if (err) return console.log(err);
+        if (data) {
+            const {pages} = data;
+            const content = mergeContentOfPages(pages);
+            const result = generateDisciplines(content);
+            console.log(JSON.stringify(result));
+        }
+    });
+}
 
 const mergeContentOfPages = (pages) => {
     let content = [];
@@ -176,3 +178,6 @@ const filterTimes = (content) => {
 
     return filterContent(content, filter).map(contentItem => contentItem.str.replace(regexReplace, ''));
 }
+
+
+main();
