@@ -1,10 +1,9 @@
 const PDFExtract = require('pdf.js-extract').PDFExtract;
 const pdfExtract = new PDFExtract();
 const filePath = './files/cc.pdf';
-const options = {};
 
 const main = () => {
-    pdfExtract.extract(filePath, options, (err, data) => {
+    pdfExtract.extract(filePath, {}, (err, data) => {
         if (err) return console.log(err);
         if (data) {
             const {pages} = data;
