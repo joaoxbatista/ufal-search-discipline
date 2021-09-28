@@ -15,6 +15,6 @@ export class ClassTime {
     @Column()
     end: string;
 
-    @ManyToOne(() => Discipline, discipline => discipline.class_times)
+    @ManyToOne(() => Discipline, discipline => discipline.classTimes)
     discipline: Discipline;
 }
