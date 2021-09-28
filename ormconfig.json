@@ -1,0 +1,24 @@
+{
+   "type": "mysql",
+   "host": "localhost",
+   "port": 3306,
+   "username": "root",
+   "password": "",
+   "database": "ufal_ofertas",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/api/models/**/*.ts"
+   ],
+   "migrations": [
+      "src/api/migrations/**/*.ts"
+   ],
+   "subscribers": [
+      "src/api/subscribers/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/api/models/",
+      "migrationsDir": "src/api/migrations",
+      "subscribersDir": "src/api/subscribers"
+   }
+}
